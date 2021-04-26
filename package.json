@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "js工具库",
   "main": "lib/bundle.js",
-  "files": [],
+  "files": [
+    "libs"
+  ],
   "scripts": {
     "test": "jest ./test",
     "docs": "jsdoc --configure jsdoc.config.json",
