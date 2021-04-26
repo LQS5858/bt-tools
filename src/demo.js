@@ -19,7 +19,7 @@
  * @return {Boolean|String} - 返回首字母大写的数据类型（ex：Number）或者布尔值
  * @version 1.0.0
  */
-const typeOf = function (value, type) {
+const typeOf = (value, type) => {
     let r = typeof value
     if (r !== 'object') {
         if (type) {
