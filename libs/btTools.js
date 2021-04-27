@@ -8682,11 +8682,10 @@ var browser = __webpack_require__(2592);
 
 
 
- // const QrCode = require('qrcode')
 
 /**
  * @description
- * <span style="color:red;font-weight:bold">生成带logo的二维码</span>
+ * <span style="color:red;font-weight:bold">基于qrcode二次开发,生成带logo的二维码</span>
  * |输入值|输出
  * |---|---
  * |二维码内容|二维码dom
@@ -8698,7 +8697,7 @@ var browser = __webpack_require__(2592);
  * @param {dom} imgDom -logo图片dom
  * @param {Object} options -二维码配置
  * @return {Object} -生成二维码dom
- * @version 1.0.0
+ * @version 1.0.2
  */
 
 var RicardoQrcode = function RicardoQrcode(content, _canvas, imgDom) {
