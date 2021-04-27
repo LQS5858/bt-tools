@@ -1,8 +1,8 @@
+
 import typeOf from './src/demo'
 import RicardoQrcode from './src/qrcode'
 
-const helper = {
+export {
     typeOf,
     RicardoQrcode
 }
-export default helper

@@ -1,4 +1,5 @@
 import QrCode from 'qrcode'
+// const QrCode = require('qrcode')
 
 /**
  * @description
