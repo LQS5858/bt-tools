@@ -17,7 +17,7 @@ import QrCode from 'qrcode'
  * @version 1.0.2
  */
 
-class RicardoQrcode {
+class Qrcode {
     constructor(content, canvas, imgDom, options = {
         width: 200,
         height: 200,

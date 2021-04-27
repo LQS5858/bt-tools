@@ -14,3 +14,9 @@ npm run docs
 npm login
 npm publish
 ```
+
+## 例子(Example)
+```
+import {Qrcode} from 'bt-tools'
+new Qrcode(content,canvas,imgDom)
+```

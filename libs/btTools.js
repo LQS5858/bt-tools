@@ -5155,6 +5155,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 /***/ 2592:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+var __webpack_unused_export__;
 
 var canPromise = __webpack_require__(7138)
 
@@ -5223,12 +5224,12 @@ function renderCanvas (renderFunc, canvas, text, opts, cb) {
   }
 }
 
-exports.create = QRCode.create
-exports.toCanvas = renderCanvas.bind(null, CanvasRenderer.render)
-exports.toDataURL = renderCanvas.bind(null, CanvasRenderer.renderToDataURL)
+__webpack_unused_export__ = QRCode.create
+__webpack_unused_export__ = renderCanvas.bind(null, CanvasRenderer.render)
+__webpack_unused_export__ = renderCanvas.bind(null, CanvasRenderer.renderToDataURL)
 
 // only svg for now.
-exports.toString = renderCanvas.bind(null, function (data, _, opts) {
+__webpack_unused_export__ = renderCanvas.bind(null, function (data, _, opts) {
   return SvgRenderer.render(data, opts)
 })
 
@@ -5342,7 +5343,7 @@ exports.getPositions = function getPositions (version) {
 /***/ 8260:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var Mode = __webpack_require__(9069)
+var Mode = __webpack_require__(6910)
 
 /**
  * Array of characters available in alphanumeric mode
@@ -5527,7 +5528,7 @@ module.exports = BitMatrix
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var BufferUtil = __webpack_require__(9131)
-var Mode = __webpack_require__(9069)
+var Mode = __webpack_require__(6910)
 
 function ByteData (data) {
   this.mode = Mode.BYTE
@@ -5902,7 +5903,7 @@ exports.mul = function mul (x, y) {
 /***/ 5442:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var Mode = __webpack_require__(9069)
+var Mode = __webpack_require__(6910)
 var Utils = __webpack_require__(242)
 
 function KanjiData (data) {
@@ -6201,7 +6202,7 @@ exports.getBestMask = function getBestMask (data, setupFormatFunc) {
 
 /***/ }),
 
-/***/ 9069:
+/***/ 6910:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var VersionCheck = __webpack_require__(3114)
@@ -6378,7 +6379,7 @@ exports.from = function from (value, defaultValue) {
 /***/ 1085:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var Mode = __webpack_require__(9069)
+var Mode = __webpack_require__(6910)
 
 function NumericData (data) {
   this.mode = Mode.NUMERIC
@@ -6510,7 +6511,7 @@ var ECCode = __webpack_require__(6245)
 var ReedSolomonEncoder = __webpack_require__(2882)
 var Version = __webpack_require__(3103)
 var FormatInfo = __webpack_require__(1642)
-var Mode = __webpack_require__(9069)
+var Mode = __webpack_require__(6910)
 var Segments = __webpack_require__(6130)
 var isArray = __webpack_require__(5147)
 
@@ -7107,7 +7108,7 @@ exports.testAlphanumeric = function testAlphanumeric (str) {
 /***/ 6130:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-var Mode = __webpack_require__(9069)
+var Mode = __webpack_require__(6910)
 var NumericData = __webpack_require__(1085)
 var AlphanumericData = __webpack_require__(8260)
 var ByteData = __webpack_require__(3424)
@@ -7533,7 +7534,7 @@ exports.isValid = function isValid (version) {
 var Utils = __webpack_require__(242)
 var ECCode = __webpack_require__(6245)
 var ECLevel = __webpack_require__(4908)
-var Mode = __webpack_require__(9069)
+var Mode = __webpack_require__(6910)
 var VersionCheck = __webpack_require__(3114)
 var isArray = __webpack_require__(5147)
 
@@ -8577,10 +8578,100 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "RicardoQrcode": () => (/* reexport */ qrcode),
+  "Qrcode": () => (/* reexport */ qrcode),
   "typeOf": () => (/* reexport */ demo)
 });
 
+// EXTERNAL MODULE: ../../../../node_modules/core-js/modules/es.object.to-string.js
+var es_object_to_string = __webpack_require__(3779);
+// EXTERNAL MODULE: ../../../../node_modules/core-js/modules/es.promise.js
+var es_promise = __webpack_require__(9814);
+// EXTERNAL MODULE: ./node_modules/qrcode/lib/browser.js
+var browser = __webpack_require__(2592);
+;// CONCATENATED MODULE: ./src/qrcode.js
+
+
+
+
+
+/**
+ * @description
+ * <span style="color:red;font-weight:bold">基于qrcode二次开发,生成带logo的二维码</span>
+ * |输入值|输出
+ * |---|---
+ * |二维码内容|二维码dom
+ * |页面canvas对象|二维码dom
+ * |logo图片dom|二维码dom
+ * |配置options|二维码dom
+ * @param {String|Object} content -生成canvas的内容
+ * @param {Object} canvas -页面canvas对象
+ * @param {dom} imgDom -logo图片dom
+ * @param {Object} options -二维码配置
+ * @return {Object} -生成二维码dom
+ * @version 1.0.2
+ */
+
+var Qrcode = function Qrcode(content, _canvas, imgDom) {
+  var _this = this;
+
+  var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
+    width: 200,
+    height: 200,
+    margin: 0
+  };
+
+  _classCallCheck(this, Qrcode);
+
+  _defineProperty(this, "imgToggleCanvas", function () {
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(0, 0, 40, 40); //先画一个40*40的正方形，颜色#ffffff，此处因为logo图片四周没有留白
+
+    ctx.drawImage(_this.imgDom, 4, 4, 32, 32); //将 32*32 的 logoImg 画到 canvas 上
+
+    return canvas;
+  });
+
+  _defineProperty(this, "mergeCanvas", function (generateCanvas) {
+    //生成的二维码 canvas	
+    // const { qrcodeCanvas } = this.$refs;
+    var logoCavans = _this.imgToggleCanvas(); //第2步里面的转换后的canvas
+
+
+    var canvas = document.createElement('canvas');
+    canvas.width = generateCanvas.width;
+    canvas.height = generateCanvas.height;
+    canvas.getContext('2d').drawImage(generateCanvas, 0, 0); //将 generateCanvas 画到 canvas 上，坐标 0，0
+
+    canvas.getContext('2d').drawImage(logoCavans, 80, 80); //将 logoCavans 画到 canvas 上，坐标 80，80
+
+    _this.canvas.width = canvas.width;
+    _this.canvas.height = canvas.height;
+
+    _this.canvas.getContext('2d').drawImage(canvas, 0, 0);
+  });
+
+  _defineProperty(this, "ricardoQrcode", function () {
+    return new Promise(function (resolve, reject) {
+      QrCode.toCanvas(_this.content, _this.options).then(function (el) {
+        _this.mergeCanvas(el);
+
+        resolve("二维码生成成功!");
+      })["catch"](function (e) {
+        reject("\u4E8C\u7EF4\u7801\u751F\u6210\u5931\u8D25,".concat(e));
+      });
+    });
+  });
+
+  this.content = content;
+  this.canvas = _canvas;
+  this.imgDom = imgDom;
+  this.options = options;
+} //logo转canvas
+;
+
+/* harmony default export */ const qrcode = (RicardoQrcode);
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
 function _typeof(obj) {
   "@babel/helpers - typeof";
@@ -8603,8 +8694,6 @@ var es_array_slice = __webpack_require__(9353);
 var es_regexp_exec = __webpack_require__(9114);
 // EXTERNAL MODULE: ../../../../node_modules/core-js/modules/es.string.replace.js
 var es_string_replace = __webpack_require__(9847);
-// EXTERNAL MODULE: ../../../../node_modules/core-js/modules/es.object.to-string.js
-var es_object_to_string = __webpack_require__(3779);
 ;// CONCATENATED MODULE: ./src/demo.js
 
 
@@ -8652,116 +8741,8 @@ var typeOf = function typeOf(value, type) {
 };
 
 /* harmony default export */ const demo = (typeOf);
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-// EXTERNAL MODULE: ../../../../node_modules/core-js/modules/es.promise.js
-var es_promise = __webpack_require__(9814);
-// EXTERNAL MODULE: ./node_modules/qrcode/lib/browser.js
-var browser = __webpack_require__(2592);
-;// CONCATENATED MODULE: ./src/qrcode.js
-
-
-
-
-
-/**
- * @description
- * <span style="color:red;font-weight:bold">基于qrcode二次开发,生成带logo的二维码</span>
- * |输入值|输出
- * |---|---
- * |二维码内容|二维码dom
- * |页面canvas对象|二维码dom
- * |logo图片dom|二维码dom
- * |配置options|二维码dom
- * @param {String|Object} content -生成canvas的内容
- * @param {Object} canvas -页面canvas对象
- * @param {dom} imgDom -logo图片dom
- * @param {Object} options -二维码配置
- * @return {Object} -生成二维码dom
- * @version 1.0.2
- */
-
-var RicardoQrcode = function RicardoQrcode(content, _canvas, imgDom) {
-  var _this = this;
-
-  var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
-    width: 200,
-    height: 200,
-    margin: 0
-  };
-
-  _classCallCheck(this, RicardoQrcode);
-
-  _defineProperty(this, "imgToggleCanvas", function () {
-    var canvas = document.createElement('canvas');
-    var ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#FFFFFF';
-    ctx.fillRect(0, 0, 40, 40); //先画一个40*40的正方形，颜色#ffffff，此处因为logo图片四周没有留白
-
-    ctx.drawImage(_this.imgDom, 4, 4, 32, 32); //将 32*32 的 logoImg 画到 canvas 上
-
-    return canvas;
-  });
-
-  _defineProperty(this, "mergeCanvas", function (generateCanvas) {
-    //生成的二维码 canvas	
-    // const { qrcodeCanvas } = this.$refs;
-    var logoCavans = _this.imgToggleCanvas(); //第2步里面的转换后的canvas
-
-
-    var canvas = document.createElement('canvas');
-    canvas.width = generateCanvas.width;
-    canvas.height = generateCanvas.height;
-    canvas.getContext('2d').drawImage(generateCanvas, 0, 0); //将 generateCanvas 画到 canvas 上，坐标 0，0
-
-    canvas.getContext('2d').drawImage(logoCavans, 80, 80); //将 logoCavans 画到 canvas 上，坐标 80，80
-
-    _this.canvas.width = canvas.width;
-    _this.canvas.height = canvas.height;
-
-    _this.canvas.getContext('2d').drawImage(canvas, 0, 0);
-  });
-
-  _defineProperty(this, "ricardoQrcode", function () {
-    return new Promise(function (resolve, reject) {
-      browser.toCanvas(_this.content, _this.options).then(function (el) {
-        _this.mergeCanvas(el);
-
-        resolve("二维码生成成功!");
-      })["catch"](function (e) {
-        reject("\u4E8C\u7EF4\u7801\u751F\u6210\u5931\u8D25,".concat(e));
-      });
-    });
-  });
-
-  this.content = content;
-  this.canvas = _canvas;
-  this.imgDom = imgDom;
-  this.options = options;
-} //logo转canvas
-;
-
-/* harmony default export */ const qrcode = (RicardoQrcode);
 ;// CONCATENATED MODULE: ./index.js
+/* Automatically generated by './build/bin/build-entry.js' */
 
 
 
