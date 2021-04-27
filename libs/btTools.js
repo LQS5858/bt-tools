@@ -5155,7 +5155,6 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 /***/ 2592:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-var __webpack_unused_export__;
 
 var canPromise = __webpack_require__(7138)
 
@@ -5224,12 +5223,12 @@ function renderCanvas (renderFunc, canvas, text, opts, cb) {
   }
 }
 
-__webpack_unused_export__ = QRCode.create
-__webpack_unused_export__ = renderCanvas.bind(null, CanvasRenderer.render)
-__webpack_unused_export__ = renderCanvas.bind(null, CanvasRenderer.renderToDataURL)
+exports.create = QRCode.create
+exports.toCanvas = renderCanvas.bind(null, CanvasRenderer.render)
+exports.toDataURL = renderCanvas.bind(null, CanvasRenderer.renderToDataURL)
 
 // only svg for now.
-__webpack_unused_export__ = renderCanvas.bind(null, function (data, _, opts) {
+exports.toString = renderCanvas.bind(null, function (data, _, opts) {
   return SvgRenderer.render(data, opts)
 })
 
@@ -5343,7 +5342,7 @@ exports.getPositions = function getPositions (version) {
 /***/ 8260:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var Mode = __webpack_require__(6910)
+var Mode = __webpack_require__(9069)
 
 /**
  * Array of characters available in alphanumeric mode
@@ -5528,7 +5527,7 @@ module.exports = BitMatrix
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var BufferUtil = __webpack_require__(9131)
-var Mode = __webpack_require__(6910)
+var Mode = __webpack_require__(9069)
 
 function ByteData (data) {
   this.mode = Mode.BYTE
@@ -5903,7 +5902,7 @@ exports.mul = function mul (x, y) {
 /***/ 5442:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var Mode = __webpack_require__(6910)
+var Mode = __webpack_require__(9069)
 var Utils = __webpack_require__(242)
 
 function KanjiData (data) {
@@ -6202,7 +6201,7 @@ exports.getBestMask = function getBestMask (data, setupFormatFunc) {
 
 /***/ }),
 
-/***/ 6910:
+/***/ 9069:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var VersionCheck = __webpack_require__(3114)
@@ -6379,7 +6378,7 @@ exports.from = function from (value, defaultValue) {
 /***/ 1085:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var Mode = __webpack_require__(6910)
+var Mode = __webpack_require__(9069)
 
 function NumericData (data) {
   this.mode = Mode.NUMERIC
@@ -6511,7 +6510,7 @@ var ECCode = __webpack_require__(6245)
 var ReedSolomonEncoder = __webpack_require__(2882)
 var Version = __webpack_require__(3103)
 var FormatInfo = __webpack_require__(1642)
-var Mode = __webpack_require__(6910)
+var Mode = __webpack_require__(9069)
 var Segments = __webpack_require__(6130)
 var isArray = __webpack_require__(5147)
 
@@ -7108,7 +7107,7 @@ exports.testAlphanumeric = function testAlphanumeric (str) {
 /***/ 6130:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-var Mode = __webpack_require__(6910)
+var Mode = __webpack_require__(9069)
 var NumericData = __webpack_require__(1085)
 var AlphanumericData = __webpack_require__(8260)
 var ByteData = __webpack_require__(3424)
@@ -7534,7 +7533,7 @@ exports.isValid = function isValid (version) {
 var Utils = __webpack_require__(242)
 var ECCode = __webpack_require__(6245)
 var ECLevel = __webpack_require__(4908)
-var Mode = __webpack_require__(6910)
+var Mode = __webpack_require__(9069)
 var VersionCheck = __webpack_require__(3114)
 var isArray = __webpack_require__(5147)
 
@@ -8582,6 +8581,27 @@ __webpack_require__.d(__webpack_exports__, {
   "typeOf": () => (/* reexport */ demo)
 });
 
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
 // EXTERNAL MODULE: ../../../../node_modules/core-js/modules/es.object.to-string.js
 var es_object_to_string = __webpack_require__(3779);
 // EXTERNAL MODULE: ../../../../node_modules/core-js/modules/es.promise.js
@@ -8654,7 +8674,7 @@ var Qrcode = function Qrcode(content, _canvas, imgDom) {
 
   _defineProperty(this, "ricardoQrcode", function () {
     return new Promise(function (resolve, reject) {
-      QrCode.toCanvas(_this.content, _this.options).then(function (el) {
+      browser.toCanvas(_this.content, _this.options).then(function (el) {
         _this.mergeCanvas(el);
 
         resolve("二维码生成成功!");
@@ -8671,7 +8691,7 @@ var Qrcode = function Qrcode(content, _canvas, imgDom) {
 } //logo转canvas
 ;
 
-/* harmony default export */ const qrcode = (RicardoQrcode);
+/* harmony default export */ const qrcode = (Qrcode);
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
 function _typeof(obj) {
   "@babel/helpers - typeof";

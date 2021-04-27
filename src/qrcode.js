@@ -64,4 +64,4 @@ class Qrcode {
 }
 
 
-export default RicardoQrcode
+export default Qrcode
