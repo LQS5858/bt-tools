@@ -16,6 +16,11 @@ npm publish
 ```
 
 ## 例子(Example)
+### CDN
+```
+<script src="https://unpkg.com/bt-tools@1.0.6/libs/btTools.min.js"></script>
+```
+### NPM
 ```
 import {Qrcode} from 'bt-tools'
 new Qrcode(content,canvas,imgDom)

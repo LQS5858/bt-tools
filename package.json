@@ -30,7 +30,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/LQS5858/bt-tools"
+  },
+  "bugs": {
+    "url": "https://github.com/LQS5858/bt-tools/issues"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
