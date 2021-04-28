@@ -13,10 +13,11 @@
     "patch": "npm version patch -m '小版本'",
     "docs": "jsdoc --configure jsdoc.config.json",
     "build:file": "node ./build/build_entry.js",
-    "publish:patch": "yarn run patch & node ./build/npm_publish",
-    "publish:minor": "yarn run minor & node ./build/npm_publish",
-    "publish:major": "yarn run major & node ./build/npm_publish",
-    "build": "yarn build:file & rimraf ./libs & webpack --config build/webpack.config.js & yarn docs & yarn cp:file",
+    "publish": "node ./build/npm_publish",
+    "publish:patch": "npm run patch & node ./build/npm_publish",
+    "publish:minor": "npm run minor & node ./build/npm_publish",
+    "publish:major": "npm run major & node ./build/npm_publish",
+    "build": "npm build:file & rimraf ./libs & webpack --config build/webpack.config.js & yarn docs & yarn cp:file",
     "cp:file": "cp-cli ./docs/bt-tools/1.0.2  ./dist"
   },
   "keywords": [
