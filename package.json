@@ -35,6 +35,7 @@
   "bugs": {
     "url": "https://github.com/LQS5858/bt-tools/issues"
   },
+  "unpkg": "libs/btTools.min.js",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "qrcode": "^1.4.4"
