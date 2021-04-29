@@ -8646,9 +8646,9 @@ var Qrcode = function Qrcode(content, _canvas, imgDom) {
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext('2d');
     ctx.fillStyle = '#FFFFFF';
-    ctx.fillRect(0, 0, 40, 40); //先画一个40*40的正方形，颜色#ffffff，此处因为logo图片四周没有留白
+    ctx.fillRect(0, 0, 30, 30); //先画一个40*40的正方形，颜色#ffffff，此处因为logo图片四周没有留白
 
-    ctx.drawImage(_this.imgDom, 4, 4, 32, 32); //将 32*32 的 logoImg 画到 canvas 上
+    ctx.drawImage(_this.imgDom, 4, 4, 25, 25); //将 32*32 的 logoImg 画到 canvas 上
 
     return canvas;
   });

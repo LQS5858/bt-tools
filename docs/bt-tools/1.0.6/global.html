@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Qrcode - Documentation</title>
+    <title>Global - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Qrcode</h1>
+    <h1 class="page-title">Global</h1>
     
 
     
@@ -45,7 +45,7 @@
 <header>
     
         <h2>
-        Qrcode
+        
         </h2>
         
     
@@ -57,9 +57,74 @@
         
             
 
+<dl class="details">
+
     
 
-    <h4 class="name" id="Qrcode"><span class="type-signature"></span>new Qrcode<span class="signature">(content, canvas, imgDom, options)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="typeOf"><span class="type-signature"></span>typeOf<span class="signature">(value, type<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Boolean|String}</span></h4>
 
     
 
@@ -71,13 +136,13 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="qrcode.js.html">qrcode.js</a>, <a href="qrcode.js.html#line20">line 20</a>
+        <a href="demo.js.html">demo.js</a>, <a href="demo.js.html#line22">line 22</a>
     </li></ul></dd>
     
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>1.0.2</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>1.0.0</li></ul></dd>
     
 
     
@@ -114,7 +179,7 @@
 
 
 <div class="description usertext">
-    <p><span style="color:red;font-weight:bold">基于qrcode二次开发,生成带logo的二维码</span></p>
+    <p><span style='color:red;font-weight:bold'>检查某个数据的数据类型</span></p>
 <table>
 <thead>
 <tr>
@@ -124,20 +189,48 @@
 </thead>
 <tbody>
 <tr>
-<td>二维码内容</td>
-<td>二维码dom</td>
+<td>123</td>
+<td>Number</td>
 </tr>
 <tr>
-<td>页面canvas对象</td>
-<td>二维码dom</td>
+<td>'abcdef'</td>
+<td>String</td>
 </tr>
 <tr>
-<td>logo图片dom</td>
-<td>二维码dom</td>
+<td>true</td>
+<td>Bollean</td>
 </tr>
 <tr>
-<td>配置options</td>
-<td>二维码dom</td>
+<td>[1, 2, 3, 4]</td>
+<td>Array</td>
+</tr>
+<tr>
+<td>{name:'wenzi', age:25}</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>console.log('this is function')</td>
+<td>Function</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>Undefined</td>
+</tr>
+<tr>
+<td>null</td>
+<td>Null</td>
+</tr>
+<tr>
+<td>new Date()</td>
+<td>Date</td>
+</tr>
+<tr>
+<td>/^[a-zA-Z]{5,20}$/</td>
+<td>RegExp</td>
+</tr>
+<tr>
+<td>new Error()</td>
+<td>Error</td>
 </tr>
 </tbody>
 </table>
@@ -166,6 +259,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -178,95 +273,64 @@
 
         <tr>
             
-                <td class="name"><code>content</code></td>
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>输入值</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
             
 
             <td class="type">
             
                 
 <span class="param-type">String</span>
-|
-
-<span class="param-type">Object</span>
 
 
             
             </td>
 
             
-
-            
-
-            <td class="description last"><p>生成canvas的内容</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>canvas</code></td>
-            
-
-            <td class="type">
-            
+                <td class="attributes">
                 
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>页面canvas对象</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>imgDom</code></td>
-            
-
-            <td class="type">
-            
+                    &lt;optional><br>
                 
-<span class="param-type">dom</span>
 
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>logo图片dom</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
                 
-<span class="param-type">Object</span>
 
-
-            
-            </td>
-
+                
+                </td>
             
 
             
 
-            <td class="description last"><p>二维码配置</p></td>
+            <td class="description last"><p>需要核对的数据类型，不填的时候则返回数据类型</p></td>
         </tr>
 
     
@@ -292,7 +356,9 @@
 
         
 <div class="param-desc">
-    <p>-生成二维码dom</p>
+    <ul>
+<li>返回首字母大写的数据类型（ex：Number）或者布尔值</li>
+</ul>
 </div>
 
 
@@ -303,7 +369,10 @@
     </dt>
     <dd>
         
-<span class="param-type">Object</span>
+<span class="param-type">Boolean</span>
+|
+
+<span class="param-type">String</span>
 
 
     </dd>
@@ -314,23 +383,6 @@
 
 
         
-        </div>
-    
-
-    
-
-    
-
-    
-    
-    
-
-     
-
-    
-
-    
-
     
 
     
@@ -350,7 +402,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Tue Apr 27 2021 18:57:12 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Thu Apr 29 2021 13:42:21 GMT+0800 (GMT+08:00) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
