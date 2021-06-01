@@ -14,7 +14,7 @@ import QrCode from 'qrcode'
  * @param {dom} imgDom -logo图片dom
  * @param {Object} options -二维码配置
  * @return {Object} -生成二维码dom
- * @version 1.0.2
+ * @version 1.0.7
  */
 
 class Qrcode {

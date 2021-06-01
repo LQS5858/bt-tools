@@ -11,14 +11,15 @@
     "major": "npm version major -m '大版本'",
     "minor": "npm version minor -m '中版本'",
     "patch": "npm version patch -m '小版本'",
-    "docs": "jsdoc --configure jsdoc.config.json",
+    "docs": "npm run updateVersion & jsdoc --configure jsdoc.config.json & npm run cp:file",
     "build:file": "node ./build/build_entry.js",
+    "updateVersion": "node ./build/update_version.js",
     "publish": "node ./build/npm_publish",
     "publish:patch": "npm run patch  & node ./build/npm_publish",
     "publish:minor": "npm run minor  & node ./build/npm_publish",
     "publish:major": "npm run major  & node ./build/npm_publish",
-    "build": "npm build:file & rimraf ./libs & webpack --config build/webpack.config.js & yarn docs & yarn cp:file",
-    "cp:file": "cp-cli ./docs/bt-tools/1.0.2  ./dist"
+    "build": "npm build:file & rimraf ./libs & npm run updateVersion & webpack --config build/webpack.config.js & yarn docs & yarn cp:file",
+    "cp:file": "node ./build/cpDoc.js"
   },
   "keywords": [
     "tool",
