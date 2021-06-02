@@ -9,4 +9,5 @@ yarn-debug.log.*
 yarn-error.log.*
 lerna-debug.log.*
 libs
-dist
+/dist
+/docs
