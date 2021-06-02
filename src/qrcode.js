@@ -9,6 +9,7 @@ import QrCode from 'qrcode'
  * |页面canvas对象|二维码dom
  * |logo图片dom|二维码dom
  * |配置options|二维码dom
+ * @author Ricardo
  * @param {String|Object} content -生成canvas的内容
  * @param {Object} canvas -页面canvas对象
  * @param {dom} imgDom -logo图片dom
