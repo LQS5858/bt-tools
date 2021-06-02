@@ -29,5 +29,5 @@ jobs:
       with:
         ACCESS_TOKEN: ${secrets.BT_TOOLS}
         BRANCH: gh-pages
-        FOLDER: dist
+        FOLDER: docs
 
