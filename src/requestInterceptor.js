@@ -8,6 +8,13 @@ import AxiosApiCache from './utils/axiosApiCache'
  * |输入|输出
  * |---|---
  * |config-{cache:true,setExpireTime:ms,storage:true}|无
+ * 
+ * # Example
+ * 
+ * ```
+ * import {RequestInterceptor}  from 'bt-tools'
+ * RequestInterceptor(config,axios)
+ * ```
  * @author Ricardo
  * @param {Object} config - axios传入参数配置对象,包含三个属性；例如{cache:布尔是否开启缓存,setExpireTime:时间戳-数据时效长,storage:布尔-是否缓存到localstorage}
    @reutrn 无
@@ -15,7 +22,7 @@ import AxiosApiCache from './utils/axiosApiCache'
 */
 
 function RequestInterceptor (config, axios) {
-    AxiosApiCache.requestInterceptor(config, axios)
+  AxiosApiCache.requestInterceptor(config, axios)
 }
 
 export default RequestInterceptor

@@ -6,6 +6,12 @@ import CommonFuns from './commonFuns'
  * |输入|输出
  * |---|---
  * |接口参数|key
+ * 
+ * # Example
+ * ```
+ * import {GenerateReqKey} from 'bt-tools'
+ * GenerateReqKey({})
+ * ```
  * @author Ricardo
  * @param {Object} config - axios接口参数对象 
  * @return {String} key - 缓存key
