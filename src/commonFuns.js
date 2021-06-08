@@ -13,7 +13,7 @@
  * ```
  * @param {String} str - 字符串
  * @return {Boolean}  true|false
- * @version 1.0.7
+ * @version 1.1.0
  * @author Ricardo
  */
 function isJsonStr (str) {

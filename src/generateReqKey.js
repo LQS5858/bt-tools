@@ -9,7 +9,7 @@ import CommonFuns from './commonFuns'
  * @author Ricardo
  * @param {Object} config - axios接口参数对象 
  * @return {String} key - 缓存key
- * @version 1.0.7
+ * @version 1.1.0
  */
 function GenerateReqKey (config) {
     //响应的时候response.config中data是字符串，需要处理
