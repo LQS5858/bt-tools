@@ -7,7 +7,7 @@ const name = uppercamelcase(pkg.name)
 
 module.exports = {
     entry: {
-        btTools: path.resolve(__dirname, '../index.js'),
+        // btTools: path.resolve(__dirname, '../index.js'),
         'btTools.min': path.resolve(__dirname, '../index.js')  //min.js为压缩文件
     },
     output: {

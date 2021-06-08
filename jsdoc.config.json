@@ -6,7 +6,7 @@
             "./src"
         ],
         "includePattern": ".js$",
-        "excludePattern": "(node_modules/|docs)"
+        "excludePattern": "(node_modules/|docs|utils)"
     },
     "plugins": [
         "plugins/markdown"

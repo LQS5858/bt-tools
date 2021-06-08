@@ -11,7 +11,7 @@
     "major": "npm version major -m '大版本'",
     "minor": "npm version minor -m '中版本'",
     "patch": "npm version patch -m '小版本'",
-    "docs": "rimraf ./docs && npm run updateVersion && jsdoc --configure jsdoc.config.json",
+    "docs": "rimraf ./docs && npm run updateVersion && npm run build:file && jsdoc --configure jsdoc.config.json",
     "build:file": "node ./build/build_entry.js",
     "updateVersion": "node ./build/update_version.js",
     "publish": "node ./build/npm_publish",
@@ -39,7 +39,8 @@
   "unpkg": "libs/btTools.min.js",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "qrcode": "^1.4.4"
+    "qrcode": "^1.4.4",
+    "qs": "^6.10.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
