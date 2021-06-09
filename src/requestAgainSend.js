@@ -6,7 +6,7 @@
  * # Example
  * ```
  * import {RequestAgainSend} from 'bt-tools'
- * RequestAgainSend(response)
+ * RequestAgainSend(response,axios)
  * ```
  * |response|传入接口配置例如{retry:3,retryDelay:3000}|无
  * @param {Object} response - 接口传入配置;例如{retry:3 //重试次数,retryDelay:3000 //延时多久重试}
