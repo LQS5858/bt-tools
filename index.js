@@ -4,6 +4,7 @@ import CancelRepeatRequest from './src/cancelRepeatRequest.js';
 import CommonFuns from './src/commonFuns.js';
 import GenerateReqKey from './src/generateReqKey.js';
 import Qrcode from './src/qrcode.js';
+import RequestAgainSend from './src/requestAgainSend.js';
 import RequestInterceptor from './src/requestInterceptor.js';
 import ResponseInterceptor from './src/responseInterceptor.js';
 import typeOf from './src/demo'
@@ -15,6 +16,7 @@ export {
 CommonFuns,
 GenerateReqKey,
 Qrcode,
+RequestAgainSend,
 RequestInterceptor,
 ResponseInterceptor
 }
