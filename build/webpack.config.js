@@ -4,6 +4,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const pkg = require('../package.json')
 const uppercamelcase = require('uppercamelcase')
 const name = uppercamelcase(pkg.name)
+const isDebugger = process.env.NODE_ENV === 'debugger' ? true : false
 
 module.exports = {
     entry: {
@@ -25,7 +26,13 @@ module.exports = {
         minimize: true,
         minimizer: [
             new UglifyJSPlugin({
-                include: /\.min\.js$/
+                include: /\.min\.js$/,
+                uglifyOptions: {
+                    compress: {
+                        drop_console: !isDebugger,
+                        drop_debugger: !isDebugger
+                    }
+                }
             })
         ]
     },
