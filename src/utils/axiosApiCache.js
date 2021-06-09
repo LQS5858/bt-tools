@@ -10,7 +10,8 @@ import generateReqKey from '../generateReqKey'
             * @author Ricardo
             * @param {Boolean} cache - 接口传过来的配置参数
             * @param {Number|String} setExpireTime - 接口传过来的过期时间
-            * @param {Boolean} storage - 是否开启浏览器本地缓存localstorage
+            * @param {Boolean} storage - 覆盖localstorage的默认配置,是否开启浏览器本地缓存localstorage
+            
             * @return null
             * @version 1.0.7
             */
@@ -72,12 +73,24 @@ class AxiosApiCache {
     }
     requestInterceptor (config, axios) {
 
-        let { cache, setExpireTime, storage } = config || {}
+        let { cache, setExpireTime, storage, expire, storage_expire } = config || {}
         if (cache) {
             /**
              * 接口如果配置了storage是否开启浏览器缓存覆盖本地配置
              */
             this.options.storage = storage ? storage : this.options?.storage
+            if (expire) {
+                this.options = {
+                    ...this.options,
+                    expire
+                }
+            }
+            if (storage_expire) {
+                this.options = {
+                    ...this.options,
+                    storage_expire
+                }
+            }
             let data = this.CACHES?.[`${generateReqKey(config)}`]
             setExpireTime ? setExpireTime : (setExpireTime = this.options.expire)
             /**
