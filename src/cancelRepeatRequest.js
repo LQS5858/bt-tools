@@ -3,7 +3,7 @@ import GenerateReqKey from './generateReqKey'
 
 /**
  * @description
- * <span style="color:red;font-weight:bold">封装用于axios取消重复请求,通过接口传入配置开关{cancelRequest:true}决定是否开启取消重复请求</span>
+ * <span style="color:red;font-weight:bold">通过接口传入配置开关{cancelRequest:true}决定是否开启axios取消重复请求</span>
  * |输入|说明|输出
  * |---|---|---
  * |config|例如:{cancelRequest:true}|无
