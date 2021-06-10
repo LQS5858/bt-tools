@@ -27,7 +27,7 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Qrcode.html">Qrcode</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addPendingRequest">addPendingRequest</a></li><li><a href="global.html#GenerateReqKey">GenerateReqKey</a></li><li><a href="global.html#isJsonStr">isJsonStr</a></li><li><a href="global.html#removePendingRequest">removePendingRequest</a></li><li><a href="global.html#RequestAgainSend">RequestAgainSend</a></li><li><a href="global.html#RequestInterceptor">RequestInterceptor</a></li><li><a href="global.html#ResponseInterceptor">ResponseInterceptor</a></li><li><a href="global.html#typeOf">typeOf</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Qrcode.html">Qrcode</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addPendingRequest">addPendingRequest</a></li><li><a href="global.html#DownloadFile">DownloadFile</a></li><li><a href="global.html#GenerateReqKey">GenerateReqKey</a></li><li><a href="global.html#isJsonStr">isJsonStr</a></li><li><a href="global.html#removePendingRequest">removePendingRequest</a></li><li><a href="global.html#RequestAgainSend">RequestAgainSend</a></li><li><a href="global.html#RequestInterceptor">RequestInterceptor</a></li><li><a href="global.html#ResponseInterceptor">ResponseInterceptor</a></li><li><a href="global.html#typeOf">typeOf</a></li></ul>
 </nav>
 
 <div id="main">
@@ -261,6 +261,288 @@ CancelRepeatRequest.addPendingRequest(config)
             
 
             <td class="description last"><p>该参数为axios的请求拦截的配置参数config,如{cancelRequest:true}</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>无</p>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="DownloadFile"><span class="type-signature"></span>DownloadFile<span class="signature">(type, file, saveFile, filename)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="downloadFile.js.html">downloadFile.js</a>, <a href="downloadFile.js.html#line23">line 23</a>
+    </li></ul></dd>
+    
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>1.1.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Ricardo</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p><span style="color:red;font-weight:bold">浏览器下载文件</span></p>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>说明</th>
+<th>格式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>指定下载文件类型</td>
+<td>'img'or'canvas'</td>
+</tr>
+<tr>
+<td>file</td>
+<td>该参数为文件类型</td>
+<td>base64 or canvas的blob</td>
+</tr>
+<tr>
+<td>saveFile</td>
+<td>该参数为filesaver的saveAs方法</td>
+<td>saveAs</td>
+</tr>
+<tr>
+<td>filename</td>
+<td>该参数指定下载文件名</td>
+<td>'bt.xx'</td>
+</tr>
+</tbody>
+</table>
+<h1>Example</h1>
+<pre class="prettyprint source"><code>import {DownloadFile} from 'bt-tools'
+DownloadFile(type = 'img', file, saveFile, filename = 'bt')
+</code></pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>img</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>'img'|'canvas';该参数指定下载文件类型，目前支持下载图片和canvas画布</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Blob</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>base64｜canvas的blob数据，该参数为文件类型，当type为img文件类型需要传入图片base64,当type为canvas类型时，需要传入canvas的blob数据</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>saveFile</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>saveAs(FileSaver的saveAs方法),该参数为FileSaver的saveAs方法</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>filename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>bt</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>下载后的文件名</p></td>
         </tr>
 
     
@@ -1646,7 +1928,7 @@ ResponseInterceptor(response)
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Thu Jun 10 2021 04:38:05 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Thu Jun 10 2021 09:20:25 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
