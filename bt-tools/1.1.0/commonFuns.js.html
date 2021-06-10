@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>commonFuns.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,55 +32,53 @@
 
 <div id="main">
     
+    <h1 class="page-title">commonFuns.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
 
+/**
+ * @description
+ * &lt;span style="color:red;font-weight:bold">传入一个字符串判断该字符串是否为json字符串&lt;/span>
+ * |输入|输出
+ * |---|---
+ * |str|Boolean
+ * # Example
+ * ```
+ * import {CommonFuns} from 'bt-tools'
+ * CommonFuns.isJsonStr(str)
+ * ```
+ * @param {String} str - 字符串
+ * @return {Boolean}  true|false
+ * @version 1.1.0
+ * @author Ricardo
+ */
+function isJsonStr (str) {
+    if (typeof str === 'string') {
+        try {
+            let obj = JSON.parse(str)
+            if (typeof obj === 'object' &amp;&amp; obj) {
+                return true
+            }
+            return false
+        } catch (error) {
+            return false
+        }
+    }
+}
+const obj = { isJsonStr }
+export default obj
 
-    <section class="package">
-        <h3>bt-tools 1.1.0</h3>		
+</code></pre>
+        </article>
     </section>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    <section class="readme usertext">
-        <article><h1>类似lodash的工具库</h1>
-<h2>构建</h2>
-<pre class="prettyprint source"><code>npm install
-npm run build 
-</code></pre>
-<h2>构建工具库文档</h2>
-<pre class="prettyprint source"><code>npm install
-npm run docs
-</code></pre>
-<h2>发布到npm</h2>
-<pre class="prettyprint source"><code>npm login
-npm publish
-</code></pre>
-<h2>例子(Example)</h2>
-<h3>CDN</h3>
-<pre class="prettyprint source"><code>&lt;script src=&quot;https://unpkg.com/bt-tools@1.0.6/libs/btTools.min.js&quot;>&lt;/script>
-</code></pre>
-<h3>NPM</h3>
-<pre class="prettyprint source"><code>import {Qrcode} from 'bt-tools'
-new Qrcode(content,canvas,imgDom)
-</code></pre></article>
-    </section>
-
-
 
 
 
