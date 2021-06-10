@@ -3,7 +3,7 @@ import AxiosApiCache from './utils/axiosApiCache'
 
 /**
  * @description
- * <span style="color:red;font-weight:bold">axios响应拦截,接口成功对数据进行缓存</span>
+ * <span style="color:red;font-weight:bold">axios响应拦截,当接口返回成功对数据进行缓存</span>
  * # Example
  * ```
  * import {ResponseInterceptor} from 'bt-tools'

@@ -2,7 +2,7 @@
 
 /**
  * @description
- * <span style="color:red;font-weight:bold">检查字符串是否为json字符串</span>
+ * <span style="color:red;font-weight:bold">传入一个字符串判断该字符串是否为json字符串</span>
  * |输入|输出
  * |---|---
  * |str|Boolean
