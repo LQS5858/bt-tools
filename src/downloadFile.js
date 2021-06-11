@@ -1,3 +1,4 @@
+import { saveAs } from 'file-saver'
 /**
  * @description
  * <span style="color:red;font-weight:bold">浏览器下载文件</span>
@@ -5,22 +6,20 @@
  * |---|---|---
  * |type|指定下载文件类型|'img'or'canvas'
  * |file|该参数为文件类型|base64 or canvas的blob
- * |saveFile|该参数为filesaver的saveAs方法|saveAs
  * |filename|该参数指定下载文件名|'bt.xx'
  * # Example
  * ```
  * import {DownloadFile} from 'bt-tools'
- * DownloadFile(type = 'img', file, saveFile, filename = 'bt')
+ * DownloadFile(type = 'img', file, filename = 'bt')
  * ```
  * @param {String} type - 'img'|'canvas';该参数指定下载文件类型，目前支持下载图片和canvas画布
  * @param {Blob} file - base64｜canvas的blob数据，该参数为文件类型，当type为img文件类型需要传入图片base64,当type为canvas类型时，需要传入canvas的blob数据 
- * @param {Function} saveFile -saveAs(FileSaver的saveAs方法),该参数为FileSaver的saveAs方法  
  * @param {String} filename -下载后的文件名
  * @returns 无
  * @author Ricardo
  * @version 1.1.0
  */
-function DownloadFile (type = 'img', file, saveFile, filename = 'bt') {
+function DownloadFile (type = 'img', file, filename = 'bt') {
     /**
      * 创建一个正则表达式, 用户获取(image/png), (png), (iVBORw0KGgoAAAANSUh....)
      * */
@@ -41,11 +40,13 @@ function DownloadFile (type = 'img', file, saveFile, filename = 'bt') {
                 uInt8Array[i] = raw.charCodeAt(i)
             }
             let blob = new Blob([uInt8Array], { type: contentType })
-            saveFile(blob, filename)
+            saveAs(blob, filename)
         },
         'canvas': () => {
-            saveFile(file, `${filename}.png`)
+            saveAs(file, `${filename}.png`)
         }
     }
     return obj[type]()
 }
+
+export default DownloadFile
