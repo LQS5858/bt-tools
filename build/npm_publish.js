@@ -1,7 +1,7 @@
 const exec = require('child_process').exec;
 
 
-const cmd = 'npm publish'
+const cmd = 'npm run publish'
 
 exec(cmd, err => {
     if (err) {
