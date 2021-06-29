@@ -16,7 +16,7 @@ import AxiosApiCache from './utils/axiosApiCache'
  * ```
  * # 按需引入
  * ```
- * import RequestInterceptor from 'bt-tools/RequestInterceptor.js'
+ * import RequestInterceptor from 'bt-tools/libs/RequestInterceptor.js'
  * RequestInterceptor(config,axios)
  * ```
  * @author Ricardo
