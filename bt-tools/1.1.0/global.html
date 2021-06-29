@@ -27,7 +27,7 @@
 
 <nav >
     
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Qrcode.html">Qrcode</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addPendingRequest">addPendingRequest</a></li><li><a href="global.html#DownloadFile">DownloadFile</a></li><li><a href="global.html#GenerateReqKey">GenerateReqKey</a></li><li><a href="global.html#isJsonStr">isJsonStr</a></li><li><a href="global.html#removePendingRequest">removePendingRequest</a></li><li><a href="global.html#RequestAgainSend">RequestAgainSend</a></li><li><a href="global.html#RequestInterceptor">RequestInterceptor</a></li><li><a href="global.html#ResponseInterceptor">ResponseInterceptor</a></li><li><a href="global.html#typeOf">typeOf</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Qrcode.html">Qrcode</a><ul class='methods'><li data-type='method'><a href="Qrcode.html#ricardoQrcode">ricardoQrcode</a></li></ul></li><li><a href="StorageCache.html">StorageCache</a><ul class='methods'><li data-type='method'><a href="StorageCache.html#clear">clear</a></li><li data-type='method'><a href="StorageCache.html#get">get</a></li><li data-type='method'><a href="StorageCache.html#set">set</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#div">div</a></li><li><a href="global.html#DownloadFile">DownloadFile</a></li><li><a href="global.html#GenerateReqKey">GenerateReqKey</a></li><li><a href="global.html#isJsonStr">isJsonStr</a></li><li><a href="global.html#minus">minus</a></li><li><a href="global.html#pendingRequest">pendingRequest</a></li><li><a href="global.html#plus">plus</a></li><li><a href="global.html#removePendingRequest">removePendingRequest</a></li><li><a href="global.html#RequestAgainSend">RequestAgainSend</a></li><li><a href="global.html#RequestInterceptor">RequestInterceptor</a></li><li><a href="global.html#ResponseInterceptor">ResponseInterceptor</a></li><li><a href="global.html#times">times</a></li><li><a href="global.html#typeOf">typeOf</a></li></ul>
 </nav>
 
 <div id="main">
@@ -115,18 +115,12 @@
     
 
     
-
-    
-        <h3 class="subsection-title">Methods</h3>
+        <h3 class="subsection-title">Members</h3>
 
         
             
+<h4 class="name" id="pendingRequest"><span class="type-signature"></span>pendingRequest<span class="type-signature"></span></h4>
 
-    
-
-    <h4 class="name" id="addPendingRequest"><span class="type-signature"></span>addPendingRequest<span class="signature">(config)</span><span class="type-signature"></span></h4>
-
-    
 
 
 
@@ -136,7 +130,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="cancelRepeatRequest.js.html">cancelRepeatRequest.js</a>, <a href="cancelRepeatRequest.js.html#line4">line 4</a>
+        <a href="cancelRepeatRequest.js.html">cancelRepeatRequest.js</a>, <a href="cancelRepeatRequest.js.html#line26">line 26</a>
     </li></ul></dd>
     
 
@@ -207,6 +201,135 @@
 <pre class="prettyprint source"><code>import {CancelRepeatRequest} from 'bt-tools'
 CancelRepeatRequest.addPendingRequest(config)
 </code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code>import CancelRepeatRequest from 'bt-tools/libs/CancelRepeatRequest.js'
+CancelRepeatRequest.addPendingRequest(config)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="div"><span class="type-signature"></span>div<span class="signature">(x2, round)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line175">line 175</a>
+    </li></ul></dd>
+    
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>1.1.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Ricardo</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p><span style="color:red;font-weight:bold">除法工具函数</span></p>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>说明</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x1</td>
+<td>第一个除数</td>
+<td>两数除</td>
+</tr>
+<tr>
+<td>x2</td>
+<td>第二个除数</td>
+<td>两数除</td>
+</tr>
+<tr>
+<td>precision</td>
+<td>精度</td>
+<td>两数除</td>
+</tr>
+<tr>
+<td>round</td>
+<td>是否四舍五入(0:四舍五入；1:向下舍入)</td>
+<td>两数除</td>
+</tr>
+</tbody>
+</table>
+<h1>Example</h1>
+<pre class="prettyprint source"><code>import {CommonFuns} from 'bt-tools'
+CommonFuns.div(x1,x2)
+</code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code> import CommonFuns from 'bt-tools/libs/commonFuns.js'
+CommonFuns.div(x1,x2)
+</code></pre>
+<ul>
+<li>@param {Number} x1 -第一个除数</li>
+</ul>
 </div>
 
 
@@ -234,6 +357,8 @@ CancelRepeatRequest.addPendingRequest(config)
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -244,13 +369,13 @@ CancelRepeatRequest.addPendingRequest(config)
 
         <tr>
             
-                <td class="name"><code>config</code></td>
+                <td class="name"><code>x2</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">Number</span>
 
 
             
@@ -259,8 +384,41 @@ CancelRepeatRequest.addPendingRequest(config)
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
-            <td class="description last"><p>该参数为axios的请求拦截的配置参数config,如{cancelRequest:true}</p></td>
+            <td class="description last"><p>第二个除数</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>round</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>0</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>是否四舍五入;0:四舍五入,1:向下舍入</p></td>
         </tr>
 
     
@@ -286,7 +444,7 @@ CancelRepeatRequest.addPendingRequest(config)
 
         
 <div class="param-desc">
-    <p>无</p>
+    <p>Number</p>
 </div>
 
 
@@ -312,7 +470,7 @@ CancelRepeatRequest.addPendingRequest(config)
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="downloadFile.js.html">downloadFile.js</a>, <a href="downloadFile.js.html#line22">line 22</a>
+        <a href="downloadFile.js.html">downloadFile.js</a>, <a href="downloadFile.js.html#line27">line 27</a>
     </li></ul></dd>
     
 
@@ -391,6 +549,10 @@ CancelRepeatRequest.addPendingRequest(config)
 </table>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {DownloadFile} from 'bt-tools'
+DownloadFile(type = 'img', file, filename = 'bt')
+</code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code>import DownloadFile from 'bt-tools/libs/DownloadFile.js'
 DownloadFile(type = 'img', file, filename = 'bt')
 </code></pre>
 </div>
@@ -562,7 +724,7 @@ DownloadFile(type = 'img', file, filename = 'bt')
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="generateReqKey.js.html">generateReqKey.js</a>, <a href="generateReqKey.js.html#line20">line 20</a>
+        <a href="generateReqKey.js.html">generateReqKey.js</a>, <a href="generateReqKey.js.html#line25">line 25</a>
     </li></ul></dd>
     
 
@@ -631,6 +793,10 @@ DownloadFile(type = 'img', file, filename = 'bt')
 </table>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {GenerateReqKey} from 'bt-tools'
+GenerateReqKey({})
+</code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code>import GenerateReqKey from 'bt-tools/libs/GenerateReqKey.js'
 GenerateReqKey({})
 </code></pre>
 </div>
@@ -750,7 +916,7 @@ GenerateReqKey({})
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line19">line 19</a>
+        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line24">line 24</a>
     </li></ul></dd>
     
 
@@ -817,6 +983,10 @@ GenerateReqKey({})
 </table>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {CommonFuns} from 'bt-tools'
+CommonFuns.isJsonStr(str)
+</code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code>import CommonFuns from 'bt-tools/libs/CommonFuns.js'
 CommonFuns.isJsonStr(str)
 </code></pre>
 </div>
@@ -924,6 +1094,520 @@ CommonFuns.isJsonStr(str)
 
     
 
+    <h4 class="name" id="minus"><span class="type-signature"></span>minus<span class="signature">(x1, x2, round)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line101">line 101</a>
+    </li></ul></dd>
+    
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>1.1.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Ricardo</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p><span style="color:red;font-weight:bold">减法工具函数</span></p>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>说明</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x1</td>
+<td>第一个减数</td>
+<td>两数差</td>
+</tr>
+<tr>
+<td>x2</td>
+<td>第二个减数</td>
+<td>两数差</td>
+</tr>
+<tr>
+<td>precision</td>
+<td>精度</td>
+<td>两数差</td>
+</tr>
+<tr>
+<td>round</td>
+<td>是否四舍五入(0:四舍五入；1:向下舍入)</td>
+<td>两数差</td>
+</tr>
+</tbody>
+</table>
+<h1>Example</h1>
+<pre class="prettyprint source"><code>import {CommonFuns} from 'bt-tools'
+CommonFuns.minus(x1,x2)
+</code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code> import CommonFuns from 'bt-tools/libs/commonFuns.js'
+CommonFuns.minus(x1,x2)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x1</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>第一个减数</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>x2</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>第二个减数</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>round</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>0</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>是否四舍五入;0:四舍五入,1:向下舍入</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Number</p>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="plus"><span class="type-signature"></span>plus<span class="signature">(x1, x2, round)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line64">line 64</a>
+    </li></ul></dd>
+    
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>1.1.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Ricardo</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p><span style="color:red;font-weight:bold">加法工具函数</span></p>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>说明</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x1</td>
+<td>第一个加数</td>
+<td>两数和</td>
+</tr>
+<tr>
+<td>x2</td>
+<td>第二个加数</td>
+<td>两数和</td>
+</tr>
+<tr>
+<td>precision</td>
+<td>精度</td>
+<td>两数和</td>
+</tr>
+<tr>
+<td>round</td>
+<td>是否四舍五入(0:四舍五入；1:向下舍入)</td>
+<td>两数和</td>
+</tr>
+</tbody>
+</table>
+<h1>Example</h1>
+<pre class="prettyprint source"><code>import {CommonFuns} from 'bt-tools'
+CommonFuns.plus(x1,x2)
+</code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code> import CommonFuns from 'bt-tools/libs/commonFuns.js'
+CommonFuns.plus(x1,x2)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x1</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>第一个加数</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>x2</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>第二个加数</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>round</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>0</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>是否四舍五入;0:四舍五入,1:向下舍入</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Number</p>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
     <h4 class="name" id="removePendingRequest"><span class="type-signature"></span>removePendingRequest<span class="signature">(response)</span><span class="type-signature"></span></h4>
 
     
@@ -936,7 +1620,7 @@ CommonFuns.isJsonStr(str)
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="cancelRepeatRequest.js.html">cancelRepeatRequest.js</a>, <a href="cancelRepeatRequest.js.html#line60">line 60</a>
+        <a href="cancelRepeatRequest.js.html">cancelRepeatRequest.js</a>, <a href="cancelRepeatRequest.js.html#line69">line 69</a>
     </li></ul></dd>
     
 
@@ -1003,6 +1687,10 @@ CommonFuns.isJsonStr(str)
 </table>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {CancelRepeatRequest} from 'bt-tools'
+CancelRepeatRequest.removePendingRequest(response)
+</code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code>import CancelRepeatRequest  from 'bt-tools/libs/CancelRepeatRequest.js'
 CancelRepeatRequest.removePendingRequest(response)
 </code></pre>
 </div>
@@ -1110,7 +1798,7 @@ CancelRepeatRequest.removePendingRequest(response)
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="requestAgainSend.js.html">requestAgainSend.js</a>, <a href="requestAgainSend.js.html#line20">line 20</a>
+        <a href="requestAgainSend.js.html">requestAgainSend.js</a>, <a href="requestAgainSend.js.html#line26">line 26</a>
     </li></ul></dd>
     
 
@@ -1169,13 +1857,22 @@ CancelRepeatRequest.removePendingRequest(response)
 <th>输出</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>response</td>
+<td>传入接口配置例如{retry:3,retryDelay:3000}</td>
+<td>无</td>
+</tr>
+</tbody>
 </table>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {RequestAgainSend} from 'bt-tools'
 RequestAgainSend(response,axios)
 </code></pre>
-<p>|response|传入接口配置例如{retry:3,retryDelay:3000}|无</p>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code>import RequestAgainSend from 'bt-tools/libs/RequestAgainSend.js'
+RequestAgainSend(response,axios)
+</code></pre>
 </div>
 
 
@@ -1304,7 +2001,7 @@ RequestAgainSend(response,axios)
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="requestInterceptor.js.html">requestInterceptor.js</a>, <a href="requestInterceptor.js.html#line23">line 23</a>
+        <a href="requestInterceptor.js.html">requestInterceptor.js</a>, <a href="requestInterceptor.js.html#line28">line 28</a>
     </li></ul></dd>
     
 
@@ -1373,6 +2070,10 @@ RequestAgainSend(response,axios)
 </table>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {RequestInterceptor}  from 'bt-tools'
+RequestInterceptor(config,axios)
+</code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code>import RequestInterceptor from 'bt-tools/RequestInterceptor.js'
 RequestInterceptor(config,axios)
 </code></pre>
 </div>
@@ -1470,7 +2171,7 @@ RequestInterceptor(config,axios)
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="responseInterceptor.js.html">responseInterceptor.js</a>, <a href="responseInterceptor.js.html#line18">line 18</a>
+        <a href="responseInterceptor.js.html">responseInterceptor.js</a>, <a href="responseInterceptor.js.html#line23">line 23</a>
     </li></ul></dd>
     
 
@@ -1523,6 +2224,10 @@ RequestInterceptor(config,axios)
     <p><span style="color:red;font-weight:bold">axios响应拦截,当接口返回成功对数据进行缓存</span></p>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {ResponseInterceptor} from 'bt-tools'
+ResponseInterceptor(response)
+</code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code>import ResponseInterceptor from 'bt-tools/libs/ResponseInterceptor.js'
 ResponseInterceptor(response)
 </code></pre>
 </div>
@@ -1605,6 +2310,239 @@ ResponseInterceptor(response)
         
 <div class="param-desc">
     <p>无</p>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="times"><span class="type-signature"></span>times<span class="signature">(x2, round)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line138">line 138</a>
+    </li></ul></dd>
+    
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>1.1.0</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Ricardo</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p><span style="color:red;font-weight:bold">乘法工具函数</span></p>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>说明</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x1</td>
+<td>第一个乘数</td>
+<td>两数乘</td>
+</tr>
+<tr>
+<td>x2</td>
+<td>第二个乘数</td>
+<td>两数乘</td>
+</tr>
+<tr>
+<td>precision</td>
+<td>精度</td>
+<td>两数乘</td>
+</tr>
+<tr>
+<td>round</td>
+<td>是否四舍五入(0:四舍五入；1:向下舍入)</td>
+<td>两数乘</td>
+</tr>
+</tbody>
+</table>
+<h1>Example</h1>
+<pre class="prettyprint source"><code>import {CommonFuns} from 'bt-tools'
+CommonFuns.times(x1,x2)
+</code></pre>
+<h1>按需引入</h1>
+<pre class="prettyprint source"><code> import CommonFuns from 'bt-tools/libs/commonFuns.js'
+CommonFuns.times(x1,x2)
+</code></pre>
+<ul>
+<li>@param {Number} x1 -第一个乘数</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x2</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>第二个乘数</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>round</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>0</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>是否四舍五入;0:四舍五入,1:向下舍入</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Number</p>
 </div>
 
 
@@ -1896,7 +2834,7 @@ ResponseInterceptor(response)
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Tue Jun 29 2021 02:59:36 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Tue Jun 29 2021 10:39:22 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
