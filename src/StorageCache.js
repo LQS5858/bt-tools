@@ -20,8 +20,13 @@ class StorageCache {
      * |expire|数据过期时间,不传默认使用配置文件的过期时间,传入0永久不过期|无
      * # Example
      * ```
-     * import {Storage} from 'bt-tools'
-     * Storage.set('test','测试')
+     * import {StorageCache} from 'bt-tools'
+     * StorageCache.set('test','测试')
+     * ```
+     * # 按需引入
+     * ```
+     * import StorageCache from 'bt-tools/StorageCache.js'
+     * StorageCache.set('test','测试')
      * ```
      * @method
      * @param {String} key -缓存键
@@ -63,8 +68,13 @@ class StorageCache {
      * # Example
      * ```
      * npm install bt-tools
-     * import {Storage} from 'bt-tools'
-     * Storage.get(key)
+     * import {StorageCache} from 'bt-tools'
+     * StorageCache.get(key)
+     * ```
+     * # 按需引入
+     * ```
+     * import StorageCache from 'bt-tools/StorageCache.js'
+     * StorageCache.get(key)
      * ```
      * @method
      * @param {String} key  -缓存键
@@ -94,8 +104,13 @@ class StorageCache {
      * |key|传入缓存key|清除缓存
      * # Example
      * ```
-     * import {Storage} from 'bt-tools'
-     * Storage.clear(key)
+     * import {StorageCache} from 'bt-tools'
+     * StorageCache.clear(key)
+     * ```
+     * # 按需引入
+     * ```
+     * import StorageCache from 'bt-tools/StorageCache.js'
+     * StorageCache.clear(key)
      * ```
      * @param {String} key  -传入缓存key
      * 

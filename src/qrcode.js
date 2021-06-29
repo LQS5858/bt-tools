@@ -52,6 +52,24 @@ class Qrcode {
         this.canvas.height = canvas.height;
         this.canvas.getContext('2d').drawImage(canvas, 0, 0);
     }
+    /**
+     * @description
+     * <span style="color:red;font-weight:bold">生成二维码方法</span>
+     * # Example
+     * ```
+     * import {Qrcode} from 'bt-tools'
+     * new Qrcode(content, canvas, imgDom).ricardoQrcode().then(res=>{})
+     * ```
+     * # 按需引入
+     * ```
+     * import Qrcode  from 'bt-tools/libs/Qrcode.js'
+     * new Qrcode(content, canvas, imgDom).ricardoQrcode().then(res=>{})
+     * ```
+     * @method
+     * @version 1.1.0
+     * @author Ricardo
+     * @returns Promise
+     */
     ricardoQrcode = () => {
         return new Promise((resolve, reject) => {
             QrCode.toCanvas(this.content, this.options).then(el => {

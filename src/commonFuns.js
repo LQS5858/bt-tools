@@ -11,6 +11,11 @@ import BigNumber from 'bignumber.js'
  * import {CommonFuns} from 'bt-tools'
  * CommonFuns.isJsonStr(str)
  * ```
+ * # 按需引入
+ * ```
+ * import CommonFuns from 'bt-tools/libs/CommonFuns.js'
+ * CommonFuns.isJsonStr(str)
+ * ```
  * @param {String} str - 字符串
  * @return {Boolean}  true|false
  * @version 1.1.0

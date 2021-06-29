@@ -12,6 +12,11 @@ import { saveAs } from 'file-saver'
  * import {DownloadFile} from 'bt-tools'
  * DownloadFile(type = 'img', file, filename = 'bt')
  * ```
+ * # 按需引入
+ * ```
+ * import DownloadFile from 'bt-tools/libs/DownloadFile.js'
+ * DownloadFile(type = 'img', file, filename = 'bt')
+ * ```
  * @param {String} type - 'img'|'canvas';该参数指定下载文件类型，目前支持下载图片和canvas画布
  * @param {Blob} file - base64｜canvas的blob数据，该参数为文件类型，当type为img文件类型需要传入图片base64,当type为canvas类型时，需要传入canvas的blob数据 
  * @param {String} filename -下载后的文件名

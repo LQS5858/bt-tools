@@ -3,12 +3,18 @@
  * <span style="color:red;font-weight:bold">当axios接口失败,获取配置重试次数，重新发送接口请求</span>
  * |输入|说明|输出
  * |---|---|---
+ * |response|传入接口配置例如{retry:3,retryDelay:3000}|无
+
  * # Example
  * ```
  * import {RequestAgainSend} from 'bt-tools'
  * RequestAgainSend(response,axios)
  * ```
- * |response|传入接口配置例如{retry:3,retryDelay:3000}|无
+ * # 按需引入
+ * ```
+ * import RequestAgainSend from 'bt-tools/libs/RequestAgainSend.js'
+ * RequestAgainSend(response,axios)
+ * ```
  * @param {Object} response - 接口传入配置;例如{retry:3 //重试次数,retryDelay:3000 //延时多久重试}
  * @param {Object} axios - axios实例
  * @returns response

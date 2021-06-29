@@ -1,5 +1,5 @@
 import Qs from 'qs'
-import CommonFuns from './commonFuns'
+import CommonFuns from './CommonFuns'
 /**
  * @description
  * <span style="color:red;font-weight:bold">根据传入的对象生成缓存key</span>
@@ -10,6 +10,11 @@ import CommonFuns from './commonFuns'
  * # Example
  * ```
  * import {GenerateReqKey} from 'bt-tools'
+ * GenerateReqKey({})
+ * ```
+ * # 按需引入
+ * ```
+ * import GenerateReqKey from 'bt-tools/libs/GenerateReqKey.js'
  * GenerateReqKey({})
  * ```
  * @author Ricardo

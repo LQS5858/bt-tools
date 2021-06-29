@@ -9,6 +9,11 @@ import AxiosApiCache from './utils/axiosApiCache'
  * import {ResponseInterceptor} from 'bt-tools'
  * ResponseInterceptor(response)
  * ```
+ * # 按需引入
+ * ```
+ * import ResponseInterceptor from 'bt-tools/libs/ResponseInterceptor.js'
+ * ResponseInterceptor(response)
+ * ```
  * @param {Object} response - axios响应后的对象
  * @return 无
  * @version 1.1.0

@@ -1,4 +1,4 @@
-import generateReqKey from '../generateReqKey'
+import generateReqKey from '../GenerateReqKey'
 /**
             * @description
             * <span style="color:red;font-weight:bold">根据axios接口传过来的配置开关，开启缓存则保存请求结果和调用cacel函数取消已缓存的接口</span>
