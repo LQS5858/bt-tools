@@ -41,6 +41,7 @@
   "unpkg": "libs/btTools.min.js",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "bignumber.js": "^9.0.1",
     "qrcode": "^1.4.4",
     "qs": "^6.10.1"
   },

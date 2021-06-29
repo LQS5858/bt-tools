@@ -3,6 +3,8 @@ import { storageOptions } from './config/storage'
 /**
  * @description
  * <span style="color:red;font-weight:bold">封装localstorage过期时间控制</span>
+ * @version 1.1.0
+ * @author Ricardo
  */
 class StorageCache {
     constructor() {
@@ -22,10 +24,12 @@ class StorageCache {
      * Storage.set('test','测试')
      * ```
      * @method
-     * @param {String} key --缓存键
-     * @param {String} data --需要存入storage的值 
-     * @param {Number} expire --数据过期时间,不传默认使用配置文件的过期时间,传入0永久不过期
+     * @param {String} key -缓存键
+     * @param {String} data -需要存入storage的值 
+     * @param {Number} expire -数据过期时间,不传默认使用配置文件的过期时间,传入0永久不过期
      * @returns 无
+     * @version 1.1.0
+     * @author Ricardo
      */
     set (key, data, expire) {
         if (expire) {
@@ -63,8 +67,10 @@ class StorageCache {
      * Storage.get(key)
      * ```
      * @method
-     * @param {String} key 
-     * @returns  无
+     * @param {String} key  -缓存键
+     * @returns {Object} {data:xx,expire:xx} -缓存数据
+     * @version 1.1.0
+     * @author Ricardo
      */
     get (key) {
         let storage = localStorage.getItem(key)
@@ -80,6 +86,23 @@ class StorageCache {
         }
         return storage
     }
+    /**
+     * @description
+     * <span style="color:red;font-weight:bold">清除缓存</span>
+     * |输入|说明|输出
+     * |---|---|---
+     * |key|传入缓存key|清除缓存
+     * # Example
+     * ```
+     * import {Storage} from 'bt-tools'
+     * Storage.clear(key)
+     * ```
+     * @param {String} key  -传入缓存key
+     * 
+     * @returns  无
+     * @version 1.1.0
+     * @author Ricardo
+     */
     clear (key) {
         if (!key) return
         try {
