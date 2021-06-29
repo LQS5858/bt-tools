@@ -5,7 +5,7 @@ const funBasePath = './src/'
 let obj = {}
 try {
     const files = fs.readdirSync(path.resolve(__dirname, '../src'))
-    const utilRegex = /utils/gi
+    const utilRegex = /(utils|config)/gi
     files.forEach(item => {
         if (utilRegex.test(item)) return
         const name = item.split('.')[0]

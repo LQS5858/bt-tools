@@ -20,7 +20,7 @@
     "publish:major": "npm run major  && node ./build/npm_publish",
     "build:component": "npm run build:file && npm run updateVersion && webpack --config build/webpack.component.js",
     "build:debugger": "npm run build:file && rimraf ./libs && npm run updateVersion && cross-env NODE_ENV=debugger webpack --config build/webpack.config.js ",
-    "build": "npm run build:file && rimraf ./libs && npm run updateVersion && webpack --config build/webpack.config.js ",
+    "build": "npm run build:file && rimraf ./libs && npm run updateVersion && webpack --config build/webpack.config.js && webpack --config build/webpack.component.js",
     "cp:file": "node ./build/cpDoc.js"
   },
   "keywords": [

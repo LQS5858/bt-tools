@@ -8,6 +8,7 @@ import Qrcode from './src/qrcode.js';
 import RequestAgainSend from './src/requestAgainSend.js';
 import RequestInterceptor from './src/requestInterceptor.js';
 import ResponseInterceptor from './src/responseInterceptor.js';
+import Storage from './src/storage.js';
 import typeOf from './src/demo'
  
 
@@ -20,5 +21,6 @@ GenerateReqKey,
 Qrcode,
 RequestAgainSend,
 RequestInterceptor,
-ResponseInterceptor
+ResponseInterceptor,
+Storage
 }
