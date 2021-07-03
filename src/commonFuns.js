@@ -56,6 +56,7 @@ function isJsonStr (str) {
  * ```
  * @param {Number} x1 -第一个加数
  * @param {Number} x2 -第二个加数
+ * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
  * @version 1.1.0
@@ -93,6 +94,7 @@ function plus (x1, x2, precision = 2, round = 0) {
  * ```
  * @param {Number} x1 -第一个减数
  * @param {Number} x2 -第二个减数
+ * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
  * @version 1.1.0
@@ -128,8 +130,9 @@ function minus (x1, x2, precision = 2, round = 0) {
  *  import CommonFuns from 'bt-tools/libs/commonFuns.js'
  * CommonFuns.times(x1,x2)
  * ```
- ** @param {Number} x1 -第一个乘数
+ * @param {Number} x1 -第一个乘数
  * @param {Number} x2 -第二个乘数
+ * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
  * @version 1.1.0
@@ -165,8 +168,9 @@ function times (x1, x2, precision = 2, round = 0) {
  *  import CommonFuns from 'bt-tools/libs/commonFuns.js'
  * CommonFuns.div(x1,x2)
  * ```
- ** @param {Number} x1 -第一个除数
+ * @param {Number} x1 -第一个除数
  * @param {Number} x2 -第二个除数
+ * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
  * @version 1.1.0
