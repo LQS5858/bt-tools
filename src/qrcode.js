@@ -15,7 +15,7 @@ import QrCode from 'qrcode'
  * @param {dom} imgDom -logo图片dom
  * @param {Object} options -二维码配置
  * @return {Object} -生成二维码dom
- * @version 1.2.2
+ * @version 1.2.3
  */
 
 class Qrcode {
@@ -66,7 +66,7 @@ class Qrcode {
      * new Qrcode(content, canvas, imgDom).ricardoQrcode().then(res=>{})
      * ```
      * @method
-     * @version 1.2.2
+     * @version 1.2.3
      * @author Ricardo
      * @returns Promise
      */

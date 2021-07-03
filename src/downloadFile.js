@@ -22,7 +22,7 @@ import { saveAs } from 'file-saver'
  * @param {String} filename -下载后的文件名
  * @returns 无
  * @author Ricardo
- * @version 1.2.2
+ * @version 1.2.3
  */
 function DownloadFile (type = 'img', file, filename = 'bt') {
     /**
