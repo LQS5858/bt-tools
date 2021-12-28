@@ -22,7 +22,7 @@ import AxiosApiCache from './utils/axiosApiCache'
  * @author Ricardo
  * @param {Object} config - axios传入参数配置对象；例如{cache:true //是否开启接口数据缓存,setExpireTime:时间戳 //缓存时效长,storage:true //覆盖storage的配置；是否开启存储到localstorage,storage_expire:时间戳 //覆盖storage的配置；localstorage数据时效长,expire:时间戳 //覆盖storage的配置；缓存接口数据时效长}
  * @reutrn 无
- * @version 1.2.4
+ * @version 2.2.4
 */
 
 function RequestInterceptor (config, axios) {

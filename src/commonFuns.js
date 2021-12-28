@@ -18,7 +18,7 @@ import BigNumber from 'bignumber.js'
  * ```
  * @param {String} str - 字符串
  * @return {Boolean}  true|false
- * @version 1.2.4
+ * @version 2.2.4
  * @author Ricardo
  */
 function isJsonStr (str) {
@@ -59,18 +59,18 @@ function isJsonStr (str) {
  * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
- * @version 1.2.4
+ * @version 2.2.4
  * @author Ricardo
  */
 function plus (x1, x2, precision = 2, round = 0) {
     x1 = Number(x1)
     x2 = Number(x2)
     if (x1 === 0 && x2 === 0) return 0
-    if (!(typeof x1 === 'number') || !(typeof x2 === 'number')) return '--'
+    if (!(typeof x1 === 'number') || !(typeof x2 === 'number')) return
     let _x1 = new BigNumber(x1)
     let sum = _x1.plus(x2)
     sum = sum.toFixed(precision, round)
-    sum = isNaN(sum) ? '--' : sum
+    sum = isNaN(sum) ? null : sum
     return sum
 }
 /**
@@ -97,18 +97,18 @@ function plus (x1, x2, precision = 2, round = 0) {
  * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
- * @version 1.2.4
+ * @version 2.2.4
  * @author Ricardo
  */
 function minus (x1, x2, precision = 2, round = 0) {
     x1 = Number(x1)
     x2 = Number(x2)
     if (x1 === 0 && x2 === 0) return 0
-    if (!(typeof x1 === 'number') || !(typeof x2 === 'number')) return '--'
+    if (!(typeof x1 === 'number') || !(typeof x2 === 'number')) return
     let _x1 = new BigNumber(x1)
     let minus = _x1.minus(x2)
     minus = minus.toFixed(precision, round)
-    minus = isNaN(minus) ? '--' : minus
+    minus = isNaN(minus) ? null : minus
     return minus
 }
 /**
@@ -135,18 +135,19 @@ function minus (x1, x2, precision = 2, round = 0) {
  * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
- * @version 1.2.4
+ * @version 2.2.4
  * @author Ricardo
  */
 function times (x1, x2, precision = 2, round = 0) {
     x1 = Number(x1)
     x2 = Number(x2)
+    if (String(x1) === '0' || String(x1) === '0') return 0
     if (x1 === 0 && x2 === 0) return 0
-    if (!(typeof x1 === 'number') || !(typeof x2 === 'number')) return '--'
+    if (!(typeof x1 === 'number') || !(typeof x2 === 'number')) return
     let _x1 = new BigNumber(x1)
     let multiplied = _x1.multipliedBy(x2)
     multiplied = multiplied.toFixed(precision, round)
-    multiplied = isNaN(multiplied) ? '--' : multiplied
+    multiplied = isNaN(multiplied) ? null : multiplied
     return multiplied
 }
 /**
@@ -173,18 +174,19 @@ function times (x1, x2, precision = 2, round = 0) {
  * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
- * @version 1.2.4
+ * @version 2.2.4
  * @author Ricardo
  */
 function div (x1, x2, precision = 2, round = 0) {
     x1 = Number(x1)
     x2 = Number(x2)
+    if (String(x2) === '0' || String(x1) === '0') return
     if (x1 === 0 && x2 === 0) return 0
-    if (!(typeof x1 === 'number') || !(typeof x2 === 'number')) return '--'
+    if (!(typeof x1 === 'number') || !(typeof x2 === 'number')) return
     let _x1 = new BigNumber(x1)
     let div = _x1.div(x2)
     div = div.toFixed(precision, round)
-    div = isNaN(div) ? '--' : div
+    div = isNaN(div) ? null : div
     return div
 }
 const obj = { isJsonStr, plus, minus, times, div }

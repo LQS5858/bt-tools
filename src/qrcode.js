@@ -17,7 +17,7 @@ import QrCode from 'qrcode'
  * @param {Object} options -二维码配置,默认值{width: 200,height: 200,margin: 0}
  * @param {Object} logoOption -中间logo配置{width:40,height:40}
  * @return {Object} -生成二维码dom
- * @version 1.2.4
+ * @version 2.2.4
  */
 
 class Qrcode {
@@ -79,7 +79,7 @@ class Qrcode {
      * new Qrcode(content, canvas, imgDom).ricardoQrcode().then(res=>{})
      * ```
      * @method
-     * @version 1.2.4
+     * @version 2.2.4
      * @author Ricardo
      * @returns Promise
      */

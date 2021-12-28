@@ -107,12 +107,11 @@ class AxiosApiCache {
     }
     responseInterceptor (response) {
         /**
-         * 返回success成功才会把数据缓存起来
+         * 这个拦截添加到接口成功里面
          */
         const { config, data } = response || {}
-        const { success } = data || {}
         const { cache } = config || {}
-        if (success && cache) {
+        if (cache) {
             let _data = {
                 expire: Date.now(),
                 data
