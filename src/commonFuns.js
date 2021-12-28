@@ -18,7 +18,7 @@ import BigNumber from 'bignumber.js'
  * ```
  * @param {String} str - 字符串
  * @return {Boolean}  true|false
- * @version 2.2.4
+ * @version 2.2.6
  * @author Ricardo
  */
 function isJsonStr (str) {
@@ -59,7 +59,7 @@ function isJsonStr (str) {
  * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
- * @version 2.2.4
+ * @version 2.2.6
  * @author Ricardo
  */
 function plus (x1, x2, precision = 2, round = 0) {
@@ -97,7 +97,7 @@ function plus (x1, x2, precision = 2, round = 0) {
  * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
- * @version 2.2.4
+ * @version 2.2.6
  * @author Ricardo
  */
 function minus (x1, x2, precision = 2, round = 0) {
@@ -135,7 +135,7 @@ function minus (x1, x2, precision = 2, round = 0) {
  * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
- * @version 2.2.4
+ * @version 2.2.6
  * @author Ricardo
  */
 function times (x1, x2, precision = 2, round = 0) {
@@ -174,7 +174,7 @@ function times (x1, x2, precision = 2, round = 0) {
  * @param {Number} precision -保留小数精度
  * @param {Number} round -是否四舍五入;0:四舍五入,1:向下舍入
  * @returns Number
- * @version 2.2.4
+ * @version 2.2.6
  * @author Ricardo
  */
 function div (x1, x2, precision = 2, round = 0) {

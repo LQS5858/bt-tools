@@ -17,7 +17,7 @@
  * @param {*} value - 输入值
  * @param {String} [type] - 需要核对的数据类型，不填的时候则返回数据类型
  * @return {Boolean|String} - 返回首字母大写的数据类型（ex：Number）或者布尔值
- * @version 2.2.4
+ * @version 2.2.6
  */
 const typeOf = (value, type) => {
     let r = typeof value
