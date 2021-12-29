@@ -18,7 +18,7 @@
  * @param {Object} response - 接口传入配置;例如{retry:3 //重试次数,retryDelay:3000 //延时多久重试}
  * @param {Object} axios - axios实例
  * @returns response
- * @version 2.2.6
+ * @version 2.2.8
  * @author Ricardo
  *
  */

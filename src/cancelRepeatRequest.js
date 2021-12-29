@@ -20,7 +20,7 @@ import GenerateReqKey from './generateReqKey'
  * ```
  * @param {Object} config - 该参数为axios的请求拦截的配置参数config,如{cancelRequest:true}
  * @return 无
- * @version 2.2.6
+ * @version 2.2.8
  * @author Ricardo
  */
 let pendingRequest = new Map() //map保存键值对，任何值(对象或者原始值)都可以作为键
@@ -62,7 +62,7 @@ function addPendingRequest (config, axios) {
  * ```
  * @param {Object} response -axios响应拦截对象
  * @return 无
- * @version 2.2.6
+ * @version 2.2.8
  * @author Ricardo
  */
 

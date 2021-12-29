@@ -1,6 +1,6 @@
 {
   "name": "bt-tools",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "description": "js工具库",
   "main": "libs/btTools.min.js",
   "files": [

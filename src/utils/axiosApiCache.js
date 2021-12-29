@@ -99,7 +99,7 @@ class AxiosApiCache {
             console.log(`[接口存在缓存策略]:>>>`, data, setExpireTime, `${generateReqKey(config)}`);
             if (data && Date.now() - data?.expire < setExpireTime) {
                 console.log(`[接口缓存未过期]:>>>`);
-                config.cancelToken = new axios.cancelToken(cancel => {
+                config.cancelToken = new axios.CancelToken(cancel => {
                     cancel(data) //cancel函数传递给promise的catch
                 })
             }
