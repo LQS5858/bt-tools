@@ -19,6 +19,7 @@ import GenerateReqKey from './generateReqKey'
  * CancelRepeatRequest.addPendingRequest(config)
  * ```
  * @param {Object} config - 该参数为axios的请求拦截的配置参数config,如{cancelRequest:true}
+ * @param {Instance} Axios - 该参数为引入的axios构造函数，不是实例
  * @return 无
  * @version 2.2.8
  * @author Ricardo
@@ -60,7 +61,7 @@ function addPendingRequest (config, axios) {
  * import CancelRepeatRequest  from 'bt-tools/libs/CancelRepeatRequest.js'
  * CancelRepeatRequest.removePendingRequest(response)
  * ```
- * @param {Object} response -axios响应拦截对象
+ * @param {Object} response|error - axios响应成功拦截器返回的对象;或者axios失败拦截返回的错误对象
  * @return 无
  * @version 2.2.8
  * @author Ricardo

@@ -15,7 +15,7 @@
  * import RequestAgainSend from 'bt-tools/libs/RequestAgainSend.js'
  * RequestAgainSend(response,axios)
  * ```
- * @param {Object} response - 接口传入配置;例如{retry:3 //重试次数,retryDelay:3000 //延时多久重试}
+ * @param {Object} error - axios响应错误拦截中error，再获取error中的error.config;例如{retry:3 //重试次数,retryDelay:3000 //延时多久重试}
  * @param {Object} axios - axios实例
  * @returns response
  * @version 2.2.8
