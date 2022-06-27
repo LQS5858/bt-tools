@@ -16,7 +16,7 @@ import AxiosApiCache from './utils/axiosApiCache'
  * ```
  * @param {Object} response - axios响应后的对象
  * @return 无
- * @version 2.2.8
+ * @version 3.0.0
  * @author Ricardo
  */
 
