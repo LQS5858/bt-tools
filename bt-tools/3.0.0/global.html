@@ -136,7 +136,7 @@
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -225,7 +225,7 @@ CancelRepeatRequest.addPendingRequest(config)
 
     
 
-    <h4 class="name" id="div"><span class="type-signature"></span>div<span class="signature">(x1, x2, precision, round)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="div"><span class="type-signature"></span>div<span class="signature">(num1, num2)</span><span class="type-signature"></span></h4>
 
     
 
@@ -237,13 +237,13 @@ CancelRepeatRequest.addPendingRequest(config)
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line180">line 180</a>
+        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line143">line 143</a>
     </li></ul></dd>
     
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -298,34 +298,24 @@ CancelRepeatRequest.addPendingRequest(config)
 </thead>
 <tbody>
 <tr>
-<td>x1</td>
+<td>num1</td>
 <td>第一个除数</td>
 <td>两数除</td>
 </tr>
 <tr>
-<td>x2</td>
+<td>num2</td>
 <td>第二个除数</td>
-<td>两数除</td>
-</tr>
-<tr>
-<td>precision</td>
-<td>精度</td>
-<td>两数除</td>
-</tr>
-<tr>
-<td>round</td>
-<td>是否四舍五入(0:四舍五入；1:向下舍入)</td>
 <td>两数除</td>
 </tr>
 </tbody>
 </table>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {CommonFuns} from 'bt-tools'
-CommonFuns.div(x1,x2)
+CommonFuns.div(num1,num2)
 </code></pre>
 <h1>按需引入</h1>
 <pre class="prettyprint source"><code> import CommonFuns from 'bt-tools/libs/commonFuns.js'
-CommonFuns.div(x1,x2)
+CommonFuns.div(num1,num2)
 </code></pre>
 </div>
 
@@ -354,8 +344,6 @@ CommonFuns.div(x1,x2)
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -366,7 +354,7 @@ CommonFuns.div(x1,x2)
 
         <tr>
             
-                <td class="name"><code>x1</code></td>
+                <td class="name"><code>num1</code></td>
             
 
             <td class="type">
@@ -380,10 +368,6 @@ CommonFuns.div(x1,x2)
 
             
 
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>第一个除数</p></td>
@@ -393,7 +377,7 @@ CommonFuns.div(x1,x2)
 
         <tr>
             
-                <td class="name"><code>x2</code></td>
+                <td class="name"><code>num2</code></td>
             
 
             <td class="type">
@@ -407,71 +391,9 @@ CommonFuns.div(x1,x2)
 
             
 
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>第二个除数</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>precision</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>2</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>保留小数精度</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>round</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>0</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>是否四舍五入;0:四舍五入,1:向下舍入</p></td>
         </tr>
 
     
@@ -497,7 +419,7 @@ CommonFuns.div(x1,x2)
 
         
 <div class="param-desc">
-    <p>Number</p>
+    <p>Number|String</p>
 </div>
 
 
@@ -529,7 +451,7 @@ CommonFuns.div(x1,x2)
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -783,7 +705,7 @@ DownloadFile(type = 'img', file, filename = 'bt')
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -969,13 +891,13 @@ GenerateReqKey({})
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line24">line 24</a>
+        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line23">line 23</a>
     </li></ul></dd>
     
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -1147,7 +1069,7 @@ CommonFuns.isJsonStr(str)
 
     
 
-    <h4 class="name" id="minus"><span class="type-signature"></span>minus<span class="signature">(x1, x2, precision, round)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="minus"><span class="type-signature"></span>minus<span class="signature">(num1, num2)</span><span class="type-signature"></span></h4>
 
     
 
@@ -1159,13 +1081,13 @@ CommonFuns.isJsonStr(str)
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line103">line 103</a>
+        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line87">line 87</a>
     </li></ul></dd>
     
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -1220,34 +1142,24 @@ CommonFuns.isJsonStr(str)
 </thead>
 <tbody>
 <tr>
-<td>x1</td>
+<td>num1</td>
 <td>第一个减数</td>
 <td>两数差</td>
 </tr>
 <tr>
-<td>x2</td>
+<td>num2</td>
 <td>第二个减数</td>
-<td>两数差</td>
-</tr>
-<tr>
-<td>precision</td>
-<td>精度</td>
-<td>两数差</td>
-</tr>
-<tr>
-<td>round</td>
-<td>是否四舍五入(0:四舍五入；1:向下舍入)</td>
 <td>两数差</td>
 </tr>
 </tbody>
 </table>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {CommonFuns} from 'bt-tools'
-CommonFuns.minus(x1,x2)
+CommonFuns.minus(num1,num2)
 </code></pre>
 <h1>按需引入</h1>
 <pre class="prettyprint source"><code> import CommonFuns from 'bt-tools/libs/commonFuns.js'
-CommonFuns.minus(x1,x2)
+CommonFuns.minus(num1,num2)
 </code></pre>
 </div>
 
@@ -1276,8 +1188,6 @@ CommonFuns.minus(x1,x2)
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -1288,7 +1198,7 @@ CommonFuns.minus(x1,x2)
 
         <tr>
             
-                <td class="name"><code>x1</code></td>
+                <td class="name"><code>num1</code></td>
             
 
             <td class="type">
@@ -1302,10 +1212,6 @@ CommonFuns.minus(x1,x2)
 
             
 
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>第一个减数</p></td>
@@ -1315,7 +1221,7 @@ CommonFuns.minus(x1,x2)
 
         <tr>
             
-                <td class="name"><code>x2</code></td>
+                <td class="name"><code>num2</code></td>
             
 
             <td class="type">
@@ -1329,71 +1235,9 @@ CommonFuns.minus(x1,x2)
 
             
 
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>第二个减数</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>precision</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>2</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>保留小数精度</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>round</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>0</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>是否四舍五入;0:四舍五入,1:向下舍入</p></td>
         </tr>
 
     
@@ -1433,7 +1277,7 @@ CommonFuns.minus(x1,x2)
 
     
 
-    <h4 class="name" id="plus"><span class="type-signature"></span>plus<span class="signature">(x1, x2, precision, round)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="plus"><span class="type-signature"></span>plus<span class="signature">(num1, num2)</span><span class="type-signature"></span></h4>
 
     
 
@@ -1445,13 +1289,13 @@ CommonFuns.minus(x1,x2)
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line65">line 65</a>
+        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line60">line 60</a>
     </li></ul></dd>
     
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -1506,34 +1350,24 @@ CommonFuns.minus(x1,x2)
 </thead>
 <tbody>
 <tr>
-<td>x1</td>
+<td>num1</td>
 <td>第一个加数</td>
 <td>两数和</td>
 </tr>
 <tr>
-<td>x2</td>
+<td>num2</td>
 <td>第二个加数</td>
-<td>两数和</td>
-</tr>
-<tr>
-<td>precision</td>
-<td>精度</td>
-<td>两数和</td>
-</tr>
-<tr>
-<td>round</td>
-<td>是否四舍五入(0:四舍五入；1:向下舍入)</td>
 <td>两数和</td>
 </tr>
 </tbody>
 </table>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {CommonFuns} from 'bt-tools'
-CommonFuns.plus(x1,x2)
+CommonFuns.plus(num1,num2)
 </code></pre>
 <h1>按需引入</h1>
 <pre class="prettyprint source"><code> import CommonFuns from 'bt-tools/libs/commonFuns.js'
-CommonFuns.plus(x1,x2)
+CommonFuns.plus(num1,num2)
 </code></pre>
 </div>
 
@@ -1562,8 +1396,6 @@ CommonFuns.plus(x1,x2)
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -1574,7 +1406,7 @@ CommonFuns.plus(x1,x2)
 
         <tr>
             
-                <td class="name"><code>x1</code></td>
+                <td class="name"><code>num1</code></td>
             
 
             <td class="type">
@@ -1588,10 +1420,6 @@ CommonFuns.plus(x1,x2)
 
             
 
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>第一个加数</p></td>
@@ -1601,7 +1429,7 @@ CommonFuns.plus(x1,x2)
 
         <tr>
             
-                <td class="name"><code>x2</code></td>
+                <td class="name"><code>num2</code></td>
             
 
             <td class="type">
@@ -1615,71 +1443,9 @@ CommonFuns.plus(x1,x2)
 
             
 
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>第二个加数</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>precision</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>2</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>保留小数精度</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>round</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>0</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>是否四舍五入;0:四舍五入,1:向下舍入</p></td>
         </tr>
 
     
@@ -1705,7 +1471,7 @@ CommonFuns.plus(x1,x2)
 
         
 <div class="param-desc">
-    <p>Number</p>
+    <p>Number|String</p>
 </div>
 
 
@@ -1737,7 +1503,7 @@ CommonFuns.plus(x1,x2)
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -1915,7 +1681,7 @@ CancelRepeatRequest.removePendingRequest(response)
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -2118,7 +1884,7 @@ RequestAgainSend(response,axios)
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -2311,7 +2077,7 @@ RequestInterceptor(config,axios)
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -2457,7 +2223,7 @@ ResponseInterceptor(response)
 
     
 
-    <h4 class="name" id="times"><span class="type-signature"></span>times<span class="signature">(x1, x2, precision, round)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="times"><span class="type-signature"></span>times<span class="signature">(num1, num2)</span><span class="type-signature"></span></h4>
 
     
 
@@ -2469,13 +2235,13 @@ ResponseInterceptor(response)
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line141">line 141</a>
+        <a href="commonFuns.js.html">commonFuns.js</a>, <a href="commonFuns.js.html#line115">line 115</a>
     </li></ul></dd>
     
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -2530,34 +2296,24 @@ ResponseInterceptor(response)
 </thead>
 <tbody>
 <tr>
-<td>x1</td>
+<td>num1</td>
 <td>第一个乘数</td>
 <td>两数乘</td>
 </tr>
 <tr>
-<td>x2</td>
+<td>num2</td>
 <td>第二个乘数</td>
-<td>两数乘</td>
-</tr>
-<tr>
-<td>precision</td>
-<td>精度</td>
-<td>两数乘</td>
-</tr>
-<tr>
-<td>round</td>
-<td>是否四舍五入(0:四舍五入；1:向下舍入)</td>
 <td>两数乘</td>
 </tr>
 </tbody>
 </table>
 <h1>Example</h1>
 <pre class="prettyprint source"><code>import {CommonFuns} from 'bt-tools'
-CommonFuns.times(x1,x2)
+CommonFuns.times(num1,num2)
 </code></pre>
 <h1>按需引入</h1>
 <pre class="prettyprint source"><code> import CommonFuns from 'bt-tools/libs/commonFuns.js'
-CommonFuns.times(x1,x2)
+CommonFuns.times(num1,num2)
 </code></pre>
 </div>
 
@@ -2586,8 +2342,6 @@ CommonFuns.times(x1,x2)
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -2598,7 +2352,7 @@ CommonFuns.times(x1,x2)
 
         <tr>
             
-                <td class="name"><code>x1</code></td>
+                <td class="name"><code>num1</code></td>
             
 
             <td class="type">
@@ -2612,10 +2366,6 @@ CommonFuns.times(x1,x2)
 
             
 
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>第一个乘数</p></td>
@@ -2625,7 +2375,7 @@ CommonFuns.times(x1,x2)
 
         <tr>
             
-                <td class="name"><code>x2</code></td>
+                <td class="name"><code>num2</code></td>
             
 
             <td class="type">
@@ -2639,71 +2389,9 @@ CommonFuns.times(x1,x2)
 
             
 
-            
-                <td class="default">
-                
-                </td>
             
 
             <td class="description last"><p>第二个乘数</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>precision</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>2</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>保留小数精度</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>round</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-            
-            </td>
-
-            
-
-            
-                <td class="default">
-                
-                    <code>0</code>
-                
-                </td>
-            
-
-            <td class="description last"><p>是否四舍五入;0:四舍五入,1:向下舍入</p></td>
         </tr>
 
     
@@ -2729,7 +2417,7 @@ CommonFuns.times(x1,x2)
 
         
 <div class="param-desc">
-    <p>Number</p>
+    <p>Number|String</p>
 </div>
 
 
@@ -2761,7 +2449,7 @@ CommonFuns.times(x1,x2)
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>2.2.8</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>3.0.0</li></ul></dd>
     
 
     
@@ -3021,7 +2709,7 @@ CommonFuns.times(x1,x2)
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Wed Dec 29 2021 08:24:03 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Mon Jun 27 2022 13:18:15 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
